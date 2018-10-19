@@ -46,8 +46,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_2__["DashboardComponent"] }
+    { path: '', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_2__["DashboardComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -72,7 +71,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* AppComponent's private CSS styles */\nh1 {\n  font-size: 1.2em;\n  color: #999;\n  margin-bottom: 0;\n}\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  padding-top: 0;\n}\nnav a {\n  padding: 5px 10px;\n  text-decoration: none;\n  margin-top: 10px;\n  display: inline-block;\n  background-color: #eee;\n  border-radius: 4px;\n}\nnav a:visited, a:link {\n  color: #607D8B;\n}\nnav a:hover {\n  color: #039be5;\n  background-color: #CFD8DC;\n}\nnav a.active {\n  color: #039be5;\n}\n"
+module.exports = ".navbar {\n    height: 80px;\n    color: #fff;\n    font-size: 20px;\n    background-color: #5ac0de;\n    -ms-flex-pack: center;\n        justify-content: center;\n}\n\n.navbar p {\n  text-align: center;\n  vertical-align: middle;\n}\n\nnav a {\n    padding: 5px 10px;\n    text-decoration: none;\n    margin-top: 10px;\n    display: inline-block;\n    background-color: #eee;\n    border-radius: 4px;\n}\n\nnav a:visited,\na:link {\n    color: #607D8B;\n}\n\nnav a:hover {\n    color: #039be5;\n    background-color: #CFD8DC;\n}\n\nnav a.active {\n    color: #039be5;\n}\n\nfooter {\n    height: 300px;\n    color: #fff;\n    font-size: 20px;\n    background-color: #5ac0de;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n        align-items: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n}\n\nfooter p {\n    text-align: center;\n    vertical-align: middle;\n}"
 
 /***/ }),
 
@@ -83,7 +82,7 @@ module.exports = "/* AppComponent's private CSS styles */\nh1 {\n  font-size: 1.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md\">\n  <h1>Header</h1>\n</nav>\n\n<router-outlet></router-outlet>\n\n<footer>\n  <p>Footer</p>\n</footer>"
+module.exports = "<nav class=\"navbar navbar-toggleable-md\">\n    <p>Header</p>\n</nav>\n\n<router-outlet></router-outlet>\n\n<footer>\n  <p>Footer</p>\n</footer>"
 
 /***/ }),
 
@@ -202,7 +201,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".breadcrumb {\n    margin: 20px 0px;\n    background-color: #fff;\n    vertical-align: middle;\n    padding: 0;\n}\n\n.breadcrumb p {\n    display: inline;\n    line-height: 22px;\n    vertical-align: top;\n}\n\n.breadcrumb .last-page {\n    display: inline;\n    line-height: 22px;\n    vertical-align: top;\n    color: #6e96cd;\n    font-weight: 600;\n}\n\n.breadcrumb .icon {\n    color: #80cfe6;\n}"
 
 /***/ }),
 
@@ -213,7 +212,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  <span>icon</span> Jump to where you left off: <span class=\"lastPage\">{{lastPage}}</span>\n</p>\n"
+module.exports = "<div class=\"breadcrumb\">\n    <i class=\"icon\" data-feather=\"arrow-left\"></i>\n    <p>\n        Jump to where you left off: <span class=\"last-page\">{{lastPage}}</span>\n    </p>\n</div>\n"
 
 /***/ }),
 
@@ -266,7 +265,7 @@ var BreadcrumbComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* DashboardComponent's private CSS styles */\n[class*='col-'] {\n  float: left;\n  padding-right: 20px;\n  padding-bottom: 20px;\n}\n[class*='col-']:last-of-type {\n  padding-right: 0;\n}\na {\n  text-decoration: none;\n}\n*, *:after, *:before {\n  box-sizing: border-box;\n}\nh3 {\n  text-align: center; margin-bottom: 0;\n}\nh4 {\n  position: relative;\n}\n.grid {\n  margin: 0;\n}\n.col-1-4 {\n  width: 25%;\n}\n.module {\n  padding: 20px;\n  text-align: center;\n  color: #eee;\n  max-height: 120px;\n  min-width: 120px;\n  background-color: #607D8B;\n  border-radius: 2px;\n}\n.module:hover {\n  background-color: #EEE;\n  cursor: pointer;\n  color: #607d8b;\n}\n.grid-pad {\n  padding: 10px 0;\n}\n.grid-pad > [class*='col-']:last-of-type {\n  padding-right: 20px;\n}\n@media (max-width: 600px) {\n  .module {\n    font-size: 10px;\n    max-height: 75px; }\n}\n@media (max-width: 1024px) {\n  .grid {\n    margin: 0;\n  }\n  .module {\n    min-width: 60px;\n  }\n}\n"
+module.exports = "/* DashboardComponent's private CSS styles */\n\n.heading-text {\n  margin-bottom: 50px;\n}\n\n.heading-text .display-5 {\n    color: #565656;\n}\n\n.heading-text hr {\n    height: 2px;\n    color: #f2f2f2;\n    /* old IE */\n    background-color: #f2f2f2;\n}\n\n.heading-text p {\n  color: gray;\n}\n\n.heading-text .bottom-text {\n    display: inline;\n    line-height: 22px;\n    vertical-align: top;\n    color: #6e96cd;\n    font-weight: 600;\n}\n\n.heading-text .number {\n    display: inline-block;\n    background-color: #f2f2f2;\n    width: 40px;\n    height: 27px;\n    border-radius: 5px;\n}"
 
 /***/ }),
 
@@ -277,7 +276,7 @@ module.exports = "/* DashboardComponent's private CSS styles */\n[class*='col-']
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <app-breadcrumb></app-breadcrumb>\n\n  <h1 class=\"display-3\">Hello, world!</h1>\n  <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron\n    and three supporting pieces of content. Use it as a starting point to create something more unique.</p>\n  <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n\n</div>\n\n<app-general-topic></app-general-topic>\n<app-general-topic></app-general-topic>\n\n\n<!-- <h3>Top Topics</h3>\n<div class=\"grid grid-pad\">\n  <a *ngFor=\"let topic of topics\" class=\"col-1-4\"\n      routerLink=\"/detail/{{topic.id}}\">\n    <div class=\"module topic\">\n      <h4>{{topic.name}}</h4>\n    </div>\n  </a>\n</div> -->"
+module.exports = "<div class=\"container\">\n  <app-breadcrumb></app-breadcrumb>\n\n  <div class=\"heading-text\">\n    <h1 class=\"display-5\">The Interview Cake Course</h1>\n    <hr class=\"hr-left\" align=\"left\" width=\"40px\">\n    <p>\n      It is a long established fact that a reader will be distracted by the readble content of a page when looking at\n      its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as\n      opposed to using 'Content here, content here', making it look like readble English.\n      <br><br>\n      Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a\n      search for ‚lorem ipsum‘ will uncover many web sites still in their infancy. Various versions have evolved over\n      the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n    </p>\n    <br>\n    <span class=\"bottom-text\">Give me exercises and content in: </span><div class=\"number\"></div>\n\n  </div>\n</div>\n\n<app-general-topic background=\"gray\"></app-general-topic>\n<app-general-topic background=\"white\"></app-general-topic>"
 
 /***/ }),
 
@@ -329,7 +328,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".custom-container {\n    padding: 4rem 2rem;\n}\n\n.sub-heading {\n    color: gray;\n    font-size: 12px;\n    font-weight: 600;\n}\n\n.show-less {\n    border: 1px #80cfe6 solid;\n    border-radius: 18px;\n    padding: 6px 0 0px;\n    color: #80cfe6;\n    text-align: center;\n    width: 130px;\n    float: right;\n    cursor: pointer;\n}\n\n.show-less span {\n    vertical-align: top;\n    display: inline-block;\n}\n\nh2 {    \n    color: #565656;\n}"
 
 /***/ }),
 
@@ -340,7 +339,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <p>SECTION: 1</p>\n      <h2>General topic</h2>\n    </div>\n    <div class=\"col-md-4\">\n      <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">Show Less</a></p>\n    </div>\n  </div>\n  <hr>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <p>READINGS:</p>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <app-topic-detail title=\"hero\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n    </div>\n    <div class=\"col-md-6\">\n        <app-topic-detail title=\"hero\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n    </div>\n  </div>\n\n\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <p>QUESTIONS:</p>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n        <app-topic-detail title=\"hero\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n    </div>\n    <div class=\"col-md-6\">\n        <app-topic-detail title=\"hero\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"{{background=='gray' ? 'jumbotron' : 'custom-container'}}\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-8\">\n        <p class=\"sub-heading\">SECTION: 1</p>\n        <h2>General topic</h2>\n      </div>\n      <div class=\"col-4 text-right\">\n        <div class=\"show-less\"><i class=\"icon\" data-feather=\"arrow-up\"></i><span>Show Less</span></div>\n      </div>\n    </div>\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <p class=\"sub-heading\">READINGS:</p>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-6\">\n        <app-topic-detail background=\"{{background}}\" isRead=\"true\" title=\"Heading\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n      </div>\n      <div class=\"col-md-6\">\n        <app-topic-detail background=\"{{background}}\" isRead=\"true\" title=\"Heading\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n      </div>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <p class=\"sub-heading\">QUESTIONS:</p>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-6\">\n        <app-topic-detail background=\"{{background}}\" isRead=\"true\" title=\"Heading\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n      </div>\n      <div class=\"col-md-6\">\n        <app-topic-detail background=\"{{background}}\" isRead=\"\" title=\"Heading\" description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy......\"></app-topic-detail>\n      </div>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -379,6 +378,10 @@ var GeneralTopicComponent = /** @class */ (function () {
         this.topicService.getTopics()
             .subscribe(function (topics) { return _this.topics = topics; });
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], GeneralTopicComponent.prototype, "background", void 0);
     GeneralTopicComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-general-topic',
@@ -511,7 +514,7 @@ var TopicService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".topic-detail {\n    background-color: #fff;\n    padding: 20px 30px;\n    margin: 10px 0px 20px 0px;\n}\n\n.topic-detail.white {\n    background-color: #eceeef;\n}\n\n.topic-detail h2 {\n    font-size: 24px;\n    font-weight: 500;\n    color: #5e8ac7;\n}\n\n.topic-items {\n    position: absolute;\n    top: 40px;\n    right: 45px;\n    cursor: pointer;\n    color: #80cfe6;\n}\n\n.topic-read-item {\n    position: absolute;\n    top: 45%;\n    left: 5px;\n    cursor: pointer;\n    background-color: #5e8ac7;\n    border-radius: 29px;\n    height: 25px;\n    width: 25px;    \n    color: #fff;\n}\n\n.topic-detail .description {\n    margin: 21px 0px 0px;\n}"
 
 /***/ }),
 
@@ -522,7 +525,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n<p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">Read</a></p>\n<p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">Pin</a></p>\n<p>{{description}}</p>"
+module.exports = "<div class=\"topic-detail {{background}}\">\n    <h2>{{title}}</h2>\n    <span class=\"topic-items\">\n        <i class=\"icon\" data-feather=\"bookmark\"></i>\n        <i class=\"icon\" data-feather=\"map-pin\"></i>\n    </span>\n\n    <span class=\"topic-read-item\" *ngIf=\"isRead\">\n        <i class=\"icon\" data-feather=\"check\"></i>\n    </span>\n    <p class=\"description\">{{description}}</p>\n</div>"
 
 /***/ }),
 
@@ -560,6 +563,14 @@ var TopicComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", String)
     ], TopicComponent.prototype, "description", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], TopicComponent.prototype, "background", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], TopicComponent.prototype, "isRead", void 0);
     TopicComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-topic-detail',
