@@ -1,4 +1,12 @@
-<h2>{{title}}</h2>
-<p><a class="btn btn-secondary" href="#" role="button">Read</a></p>
-<p><a class="btn btn-secondary" href="#" role="button">Pin</a></p>
-<p>{{description}}</p>
+<div class="topic-detail {{background}}">
+    <h2>{{title}}</h2>
+    <span class="topic-items">
+        <i class="icon" data-feather="bookmark"></i>
+        <i class="icon" data-feather="map-pin"></i>
+    </span>
+
+    <span class="topic-read-item" *ngIf="isRead">
+        <i class="icon" data-feather="check"></i>
+    </span>
+    <p class="description">{{description}}</p>
+</div>

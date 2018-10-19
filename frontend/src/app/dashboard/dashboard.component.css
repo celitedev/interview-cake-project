@@ -1,62 +1,36 @@
 /* DashboardComponent's private CSS styles */
-[class*='col-'] {
-  float: left;
-  padding-right: 20px;
-  padding-bottom: 20px;
+
+.heading-text {
+  margin-bottom: 50px;
 }
-[class*='col-']:last-of-type {
-  padding-right: 0;
+
+.heading-text .display-5 {
+    color: #565656;
 }
-a {
-  text-decoration: none;
+
+.heading-text hr {
+    height: 2px;
+    color: #f2f2f2;
+    /* old IE */
+    background-color: #f2f2f2;
 }
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+.heading-text p {
+  color: gray;
 }
-h3 {
-  text-align: center; margin-bottom: 0;
+
+.heading-text .bottom-text {
+    display: inline;
+    line-height: 22px;
+    vertical-align: top;
+    color: #6e96cd;
+    font-weight: 600;
 }
-h4 {
-  position: relative;
-}
-.grid {
-  margin: 0;
-}
-.col-1-4 {
-  width: 25%;
-}
-.module {
-  padding: 20px;
-  text-align: center;
-  color: #eee;
-  max-height: 120px;
-  min-width: 120px;
-  background-color: #607D8B;
-  border-radius: 2px;
-}
-.module:hover {
-  background-color: #EEE;
-  cursor: pointer;
-  color: #607d8b;
-}
-.grid-pad {
-  padding: 10px 0;
-}
-.grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
-}
-@media (max-width: 600px) {
-  .module {
-    font-size: 10px;
-    max-height: 75px; }
-}
-@media (max-width: 1024px) {
-  .grid {
-    margin: 0;
-  }
-  .module {
-    min-width: 60px;
-  }
+
+.heading-text .number {
+    display: inline-block;
+    background-color: #f2f2f2;
+    width: 40px;
+    height: 27px;
+    border-radius: 5px;
 }

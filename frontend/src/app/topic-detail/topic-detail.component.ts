@@ -10,6 +10,9 @@ import { Topic } from '../services/topic';
 export class TopicComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
+  @Input() background: string;
+  @Input() isRead: string;
+
   constructor() { }
 
   ngOnInit() {

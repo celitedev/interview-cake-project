@@ -1,0 +1,23 @@
+.breadcrumb {
+    margin: 20px 0px;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.breadcrumb p {
+    display: inline;
+    line-height: 22px;
+    vertical-align: top;
+}
+.breadcrumb .last-page {
+    display: inline;
+    line-height: 22px;
+    vertical-align: top;
+    color: #6e96cd;
+    font-weight: 600;
+}
+
+.breadcrumb .icon {
+    color: #80cfe6;
+}

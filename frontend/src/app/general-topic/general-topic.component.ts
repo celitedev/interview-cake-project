@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Topic } from '../services/topic';
 import { TopicService } from '../services/topic.service';
@@ -9,7 +9,7 @@ import { TopicService } from '../services/topic.service';
   styleUrls: ['./general-topic.component.css']
 })
 export class GeneralTopicComponent implements OnInit {
-
+  @Input() background: string;
   topics: Topic[];
   
   constructor(private topicService: TopicService) { }
