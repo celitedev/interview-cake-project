@@ -2,6 +2,8 @@
 
 Technologies: Python 3.6, Django 2.1.2
 
+See frontend folder for frontend details
+
 To deploy locally
 ```
 cd interview-cake-project
